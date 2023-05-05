@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Sefio</string>
+    <string name="sign_in">Inicia Sesión</string>
+    <string name="email">Correo electrónico</string>
+    <string name="password">Contraseña</string>
+</resources>
