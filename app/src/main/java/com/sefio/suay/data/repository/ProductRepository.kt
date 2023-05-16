@@ -10,15 +10,4 @@ class ProductRepository @Inject constructor(
     private val productRemoteDataSource: ProductRemoteDataSource
 ) {
 
-    suspend fun fetchRecommendedProducts(): Response<List<Product>> {
-        return try {
-            val authToken = authRepository.fetchAuthToken()
-            val products = productRemoteDataSource.fetchRecommendedProducts(authToken = authToken)
-
-            Response.Success(products)
-        } catch (e:Exception) {
-            e.printStackTrace()
-            Response.Failure(e)
-        }
-    }
 }

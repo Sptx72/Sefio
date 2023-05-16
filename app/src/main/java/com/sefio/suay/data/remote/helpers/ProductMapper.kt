@@ -14,12 +14,12 @@ class ProductMapper @Inject constructor() {
 
     fun from(jsonObjectWrapper: JsonObjectWrapper): Product {
         return Product(
-            id = jsonObjectWrapper.getString(SefioDashBoard.ID),
+            id = jsonObjectWrapper.getString(SefioDashBoard.PID),
             name = jsonObjectWrapper.getString(SefioDashBoard.NAME),
             description = jsonObjectWrapper.optString(SefioDashBoard.DESCRIPTION),
             price = jsonObjectWrapper.getDouble(SefioDashBoard.PRICE),
-            category = listOf(),
-            stars = 3.0
+            category = jsonObjectWrapper.getString(SefioDashBoard.CATEGORY).split(Regex(",")),
+            stars = jsonObjectWrapper.getDouble(SefioDashBoard.STARS)
         )
     }
 }

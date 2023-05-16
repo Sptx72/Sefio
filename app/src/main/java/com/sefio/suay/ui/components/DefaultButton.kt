@@ -31,13 +31,12 @@ fun DefaultButton(
             .widthIn(300.dp),
         onClick = { onCLick() },
         enabled = enabled,
-        colors = ButtonDefaults.buttonColors(backgroundColor = AppColor)) {
+        colors = ButtonDefaults.buttonColors(backgroundColor = Color.LightGray)) {
 
         Text(
             text = text,
             fontSize = 20.sp,
-            fontWeight = FontWeight.Bold,
-            color = Color.White)
+            fontWeight = FontWeight.Bold)
 
     }
 

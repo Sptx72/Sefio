@@ -10,4 +10,6 @@ object SefioDashBoard {
     const val DESCRIPTION = "description"
     const val PRICE = "price"
     const val CATEGORY = "category"
+    const val PID = "pid"
+    const val STARS = "stars"
 }

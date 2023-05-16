@@ -8,5 +8,5 @@ class RecommendedProducts @Inject constructor(
     private val productRepository: ProductRepository
 ) {
 
-    suspend operator fun invoke() = productRepository.fetchRecommendedProducts()
+    suspend operator fun invoke() = Response.Failure<Exception>(Exception("unhandled"))
 }

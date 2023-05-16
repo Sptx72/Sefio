@@ -18,12 +18,9 @@ fun Title(
     fontColor: Color = AppColor
 ) {
 
-    Spacer(modifier = Modifier.height(30.dp))
-
     Text(
-        modifier = Modifier.padding(horizontal = 30.dp),
         text = text,
-        fontSize = 45.sp,
+        fontSize = 20.sp,
         color = fontColor,
         fontWeight = FontWeight.Bold)
 

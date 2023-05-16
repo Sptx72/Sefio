@@ -2,9 +2,9 @@ package com.sefio.suay.domain.model
 
 import com.google.gson.JsonObject
 
-class JsonObjectWrapper(val jsonObject: JsonObject) {
+class JsonObjectWrapper(val jsonObject: JsonObject): JsonWrapper() {
 
-    private fun has(fieldName:String):Boolean {
+    fun has(fieldName:String):Boolean {
         return jsonObject.has(fieldName)
     }
 

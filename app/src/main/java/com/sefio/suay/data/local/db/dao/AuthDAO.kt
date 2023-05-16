@@ -12,10 +12,7 @@ abstract class AuthDAO : BasicDAO<AuthTokenDBObject>(){
     @Query("SELECT " + ColumnName.NICKNAME + " FROM " + TableName.AUTH)
     abstract fun fetchNickName():String
 
-    @Query("SELECT " + ColumnName.TOKEN + " FROM " + TableName.AUTH)
-    abstract  fun fetchToken(): String
-
-    @Query("SELECT * FROM " + TableName.AUTH)
-    abstract fun fetchAuthToken(): AuthTokenDBObject
+    @Query("insert into " + TableName.AUTH + " (" + ColumnName.TOKEN + ") values (:id)")
+    abstract fun saveIdentification(id: String)
 
 }
