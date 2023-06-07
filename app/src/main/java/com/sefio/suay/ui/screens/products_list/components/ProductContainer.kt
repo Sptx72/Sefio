@@ -12,17 +12,15 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
-import androidx.navigation.compose.rememberNavController
 import coil.compose.AsyncImage
 import com.sefio.suay.domain.model.Product
 import com.sefio.suay.ui.navigation.Graph
-import com.sefio.suay.ui.navigation.NavArgumentNames
 
 @Composable
 fun ProductContainer(
     product: Product,
+    navHostController: NavHostController
 ) {
     Card(
         modifier = Modifier
@@ -30,7 +28,7 @@ fun ProductContainer(
             .height(250.dp)
             .padding(start = 5.dp, end = 5.dp)
             .clickable {
-
+                navHostController.navigate("${Graph.PRODUCT}/${product.id}")
             },
         backgroundColor = Color.White
     ) {
@@ -39,8 +37,8 @@ fun ProductContainer(
             verticalArrangement = Arrangement.SpaceBetween,
         ) {
             AsyncImage(
-                model = "https://cdn.pixabay.com/photo/2017/10/25/16/54/african-lion-2888519_1280.jpg",
-                contentDescription = "",
+                model = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROoSEd6KVhrOHFR5U4_llxe99Qb9W_rrBB7qAR9TLhNw&s",
+                contentDescription = "No image available",
                 contentScale = ContentScale.Fit,
                 alignment = Alignment.Center
             )

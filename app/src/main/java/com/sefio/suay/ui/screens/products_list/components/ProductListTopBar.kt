@@ -43,7 +43,10 @@ fun ProductListTopBar(
                 ProductsNavOption(
                     title = it.value,
                     onClick = {
-                        productListViewModel.fetchProductsByCategory(it)
+                        if (it == ProductCategory.Recommended)
+                            productListViewModel.fetchRecommendedProducts()
+                        else
+                            productListViewModel.fetchProductsByCategory(it)
                     }
                 )
             }

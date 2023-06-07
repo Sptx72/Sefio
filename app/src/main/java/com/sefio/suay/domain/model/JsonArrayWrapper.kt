@@ -1,6 +1,7 @@
 package com.sefio.suay.domain.model
 
 import com.google.gson.JsonArray
+import com.google.gson.JsonObject
 
 class JsonArrayWrapper(
     val jsonArray: JsonArray,
@@ -14,9 +15,9 @@ class JsonArrayWrapper(
         }
     }
 
-    fun getStringArray(): List<String> {
+    fun getObjectArray(): List<JsonObjectWrapper> {
         return jsonArray.map {
-            jsonElement -> jsonElement.asString
+            JsonObjectWrapper(it.asJsonObject)
         }
     }
 

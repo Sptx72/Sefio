@@ -8,4 +8,5 @@ sealed class HomeScreen(val  route:String, @DrawableRes val icon:Int) {
     object Cart: HomeScreen(route = "cart", R.drawable.ic_cart)
     object Profile: HomeScreen(route = "profile", R.drawable.ic_profile)
     object Settings: HomeScreen(route = "settings", R.drawable.ic_menu)
+    object ProductDetail: HomeScreen(route = "product_detail", 0)
 }

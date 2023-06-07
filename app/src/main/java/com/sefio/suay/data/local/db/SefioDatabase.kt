@@ -2,16 +2,16 @@ package com.sefio.suay.data.local.db
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import com.sefio.suay.data.local.db.dao.AuthDAO
-import com.sefio.suay.domain.db_object.AuthTokenDBObject
+import com.sefio.suay.data.local.db.dao.UserDao
+import com.sefio.suay.domain.db_object.UserDBObject
 
 @Database(
     entities = [
-        AuthTokenDBObject::class
-               ],
-    exportSchema = false,
-    version = 1
+        UserDBObject::class
+    ],
+    version = 2,
+    exportSchema = false
 )
-abstract class SefioDatabase : RoomDatabase() {
-    abstract fun getAuthDAO(): AuthDAO
+abstract class SefioDatabase: RoomDatabase() {
+    abstract fun userDao(): UserDao
 }

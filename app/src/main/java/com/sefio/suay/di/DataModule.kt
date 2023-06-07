@@ -2,7 +2,8 @@ package com.sefio.suay.di
 
 import android.content.Context
 import androidx.room.Room
-import androidx.room.RoomDatabase
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
 import com.sefio.suay.data.local.db.SefioDatabase
 import dagger.Module
 import dagger.Provides
@@ -15,7 +16,11 @@ import dagger.hilt.components.SingletonComponent
 class DataModule {
 
     @Provides
-    fun provideSefioDataBase(@ApplicationContext context: Context): SefioDatabase = Room.databaseBuilder(
-        context = context, SefioDatabase::class.java, "sefio_database"
-    ).build()
+    fun provideSefioDatabase(@ApplicationContext context: Context): SefioDatabase = Room.databaseBuilder(
+        context, SefioDatabase::class.java, "sefio_db"
+    ).fallbackToDestructiveMigration().build()
+
+    @Provides
+    fun provideStorage(): StorageReference = FirebaseStorage.getInstance().reference
+
 }

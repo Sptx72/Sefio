@@ -6,4 +6,6 @@
     <string name="not_account_register_here">No tienes cuenta? Regístrese aquí.</string>
     <string name="continue_with">continuar con %s</string>
     <string name="search_your_products">Busca tus productos.</string>
+    <string name="no_products_founded">No se han encontrado productos...</string>
+    <string name="no_orders_founded">No tienes ningún producto, sigue comprando ;).</string>
 </resources>

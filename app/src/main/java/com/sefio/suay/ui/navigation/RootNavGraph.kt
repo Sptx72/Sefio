@@ -21,15 +21,15 @@ fun RootNavGraph(
         authNavGraph(navHostController)
 
         composable(route = Graph.HOME) {
-            HomeScreen()
+            HomeScreen(fatherNavHostController = navHostController)
         }
 
         composable(
-            route = "${Graph.PRODUCT}",
+            route = "${Graph.PRODUCT}/{${NavArgumentNames.ProductId}}",
             arguments = listOf(navArgument(NavArgumentNames.ProductId) { type = NavType.StringType })
         ) {
-            /*val pid = it.arguments?.getString(NavArgumentNames.ProductId)*/
-            ProductDetailScreen(pid = "pid!!")
+            val pid = it.arguments?.getString(NavArgumentNames.ProductId)
+            ProductDetailScreen(pid = pid!!)
         }
     }
 }

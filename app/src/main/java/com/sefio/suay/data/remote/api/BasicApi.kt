@@ -1,4 +1,4 @@
-package com.sefio.suay.data.remote.back
+package com.sefio.suay.data.remote.api
 
 import retrofit2.Retrofit
 

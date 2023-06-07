@@ -14,12 +14,13 @@ import com.sefio.suay.ui.screens.home.components.HomeBottomBar
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
 fun HomeScreen(
-    navHostController: NavHostController = rememberNavController()
+    navHostController: NavHostController = rememberNavController(),
+    fatherNavHostController: NavHostController
 ) {
     Scaffold(
         modifier = Modifier.padding(top = 30.dp),
         content = {
-                  HomeNavGraph(navHostController)
+                  HomeNavGraph(navHostController, fatherNavHostController)
         },
         bottomBar = {
             HomeBottomBar(navHostController)

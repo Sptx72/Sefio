@@ -1,9 +1,8 @@
-package com.sefio.suay.data.remote.back
+package com.sefio.suay.data.remote.api
 
 import com.google.gson.GsonBuilder
 import okhttp3.*
 import okhttp3.HttpUrl.Companion.toHttpUrl
-import okhttp3.HttpUrl.Companion.toHttpUrlOrNull
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.security.SecureRandom
@@ -40,7 +39,7 @@ class BackApi @Inject constructor() : BasicApi{
         .build()
 
     override val retrofit: Retrofit = Retrofit.Builder()
-        .baseUrl("https://d4e8-95-62-102-50.ngrok-free.app")
+        .baseUrl("https://706a-95-62-102-50.ngrok-free.app")
         .addConverterFactory(GsonConverterFactory.create(GsonBuilder().setLenient().create()))
         .client(okHttpClient)
         .build()

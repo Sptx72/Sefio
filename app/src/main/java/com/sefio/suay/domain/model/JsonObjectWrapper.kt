@@ -46,4 +46,17 @@ class JsonObjectWrapper(val jsonObject: JsonObject): JsonWrapper() {
                     throw Exception("Unknown data")
     }
 
+    fun optDouble(fieldName: String): Double? {
+        return return if (has(fieldName))
+            jsonObject.get(fieldName).asDouble
+        else null
+    }
+
+    fun getInt(fieldName: String): Int {
+        return if (has(fieldName))
+            jsonObject.get(fieldName).asInt
+        else
+            throw Exception("Unknown data")
+    }
+
 }

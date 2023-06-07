@@ -6,7 +6,6 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.sefio.suay.domain.model.Response
-import com.sefio.suay.domain.model.User
 import com.sefio.suay.domain.usecases.SignIn
 import com.sefio.suay.ui.screens.login.components.LoginState
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -16,7 +15,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class LoginViewModel @Inject constructor(
-    private val signIn: SignIn
+    private val signIn: SignIn,
 ): ViewModel() {
 
     var state by mutableStateOf(LoginState())
