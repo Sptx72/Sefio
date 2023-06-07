@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "884559791136",
+    "project_id": "sefio-b4145",
+    "storage_bucket": "sefio-b4145.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:884559791136:android:aaa0e0c3ad12fea1a06845",
+        "android_client_info": {
+          "package_name": "com.sefio.suay"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMnYg6PxCBciKOH0cMm8pkCC7Z984HB-Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
